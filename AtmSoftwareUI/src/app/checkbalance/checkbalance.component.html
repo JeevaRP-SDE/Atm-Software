@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+
+<div class="container my-5">
+  <h1 class = "mb-3"></h1>
+
+  <div class="login-box">
+
+
+      <div class="user-box">
+          <h4 class="fw-bold text-danger" *ngIf="valid == 'invalid'">please Check your Account Number & pin :
+
+          </h4>
+
+          <h4 animate-charcter *ngIf="valid == 'valid'">Hello {{balanceInfo.name}}, Your Account Balance <span class="WebRupee">&#x20B9;</span> {{balanceInfo.currBal}}</h4>
+
+          <form #form="ngForm" (ngSubmit)="submitData()" *ngIf="valid == 'invalid' || valid == ''">
+
+              <div class="mb-3">
+                  <i class="fa-regular fa-credit-card me-2"></i>
+
+                  <label for="accno" class="form-label me-2"></label>
+                  <input type="number" class="form-control" name="accountNumber" id="accno" placeholder="0000 0000 0000 0000" [(ngModel)]="accountNumber" required>
+              </div>
+
+              <div class="mb-3">
+                  <i class="fas fa-regular fa-lock me-2"></i>
+                  <label for="pin" class="form-label me-2"></label>
+                  <input type="password" minlength="4" maxlength="4" name="cardPin" class="form-control" id="pin" placeholder="x x x x" [(ngModel)]="cardPin" required>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-hover color-3">CHECK</button>
+          </form>
+      </div>
+  </div>
+</div>
+
+
+
+
+

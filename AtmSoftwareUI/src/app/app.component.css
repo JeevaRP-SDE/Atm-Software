@@ -1,0 +1,24 @@
+.header {
+  margin: 0%;
+  background-color: #978aaa;
+  text-align: center right;
+  padding: 20px;
+}
+
+#object1 {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  object-fit: none;
+  object-position: center left;
+  /* String value */
+}
+
+#object2 {
+  width: 700px;
+  height: 100px;
+  background-color: green;
+  object-fit: none;
+  object-position: 1px 30px;
+  /* Numeric value */
+}
